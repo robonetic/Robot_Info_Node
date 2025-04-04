@@ -10,7 +10,7 @@ RobotInfo::RobotInfo(ros::NodeHandle *node_handle, string robot_description,
   this->ip_address = ip_address;
   this->firmware_version = firmware_version;
   this->robot_info_pub =
-      nh.advertise<robot_info::RobotInfoMsg>("robot_info_topic", 1000);
+      nh.advertise<robot_info::RobotInfoMsg>("robot_info", 1000);
 }
 
 void RobotInfo::publish_data() {

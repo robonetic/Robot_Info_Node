@@ -13,13 +13,9 @@ int main(int argc, char **argv) {
 
   RobotInfo robot_info_node{&nh, "Mir100", "567A359", "169.254.5.180", "3.5.8"};
 
-  ros::Rate loop_rate(10);
-
   while (ros::ok()) {
-
     robot_info_node.publish_data();
-    cout << "TICK" << endl;
-    sleep(5);
+    sleep(1);
   }
 
   ros::spin();

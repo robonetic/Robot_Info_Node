@@ -12,11 +12,9 @@ int main(int argc, char **argv) {
   AGVRobotInfo agv_robot_info_node{
       &nh, "Mir100", "567A359", "169.254.5.180", "3.5.8", 100};
 
-  ros::Rate loop_rate(10);
-
   while (ros::ok()) {
     agv_robot_info_node.publish_data();
-    sleep(5);
+    sleep(1);
   }
 
   ros::spin();
